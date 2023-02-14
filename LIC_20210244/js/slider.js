@@ -79,4 +79,8 @@ window.onload = function () {
     $botonStop.addEventListener('click', stopIntervalo);
     // Iniciar
     renderizarImagen();
+
+    setInterval(function(){
+        pasarFoto();
+    }, 5000);
 } 
