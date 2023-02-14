@@ -121,7 +121,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 40px;
+    right: 42px;
     top: -2px;
 }
 
@@ -137,7 +137,39 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+.carousel button{
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    font-size: 5rem;
+    line-height: 5rem;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.647);
+}
+
+#retroceder{
+    position: relative;
+    left: 40px;
+    transition: transform 1s ease;
+}
+
+#retroceder:hover{
+    transform: translateX(-10%);
+}
+
+#avanzar{
+    position: relative;
+    right: 40px;
+    transition: transform 1s ease;
+}
+
+#avanzar:hover{
+    transform: translateX(10%);
+}
+
 #imagen {
     width: 74%;
     height: 100%;
