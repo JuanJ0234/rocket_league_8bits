@@ -21,13 +21,13 @@
             </div>
             <div class="search-cont conts-nav">
                 <form class="search" action="https://www.google.com/search" target="_blank">
-                    <input type="text" name="q">
-                    <button type="submit">Search</button>
+                    <input id="search" type="text" name="q" placeholder="🔍| buscar...">
+                    <button id="search-btn" type="submit">Search</button>
                     
                 </form>
             </div>
             <div class="hamburguesa-cont conts-nav">
-                <label for="">☰</label>
+                <label class="hamburguesa-btn" for="">☰</label>
                 <div class="hamburguesa">
                     
                 </div>
@@ -35,6 +35,16 @@
         </nav>
         <section class="section">
 
+            <!-- Slider -->
+            <div class="carousel"> 
+                <button id="retroceder">Retroceder</button>
+                <div id="imagen"></div>
+                <button id="avanzar">Avanzar</button>
+            </div>
+            <div class="controles">
+                <button id="play">Play</button>
+                <button id="stop" disabled>Stop</button>
+            </div>
 
         </section>
         <aside class="aside">
@@ -44,7 +54,7 @@
     
         </footer>
     </div>
-        
-    </script>
+
+    <script type="text/javascript" src="js/slider.js"></script>
 </body>
 </html>
