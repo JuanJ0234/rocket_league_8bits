@@ -176,6 +176,11 @@ body{
     position: relative;
     right: 42px;
     top: -2px;
+    z-index: 990;
+}
+
+.hamburguesa-check{
+    display: none;
 }
 
 .nav > .hamburguesa-cont{
@@ -185,11 +190,14 @@ body{
  
 .hamburguesa{
     position: fixed;
+    top: 20%;
     z-index: 900;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    
+    align-items: center;
+    transition: transform 1s ease;
+    transform: translate(100%, 0);
+    background-color: pink;
 }
 
 .hamburguesa-links{
@@ -201,12 +209,18 @@ body{
 }
 
 .hamburguesa-links > a{
-    background-color: rgb(29, 29, 29);
+    background-color: rgba(177, 244, 31, 0);
     color: #fff;
-    padding: 1rem 1rem;
+    padding: 2rem 3rem;
+}
+
+.hamburguesa-links > a:hover{
+    background-color: rgb(254, 255, 253);
 }
   
-  
+.hamburguesa-check:checked ~ .hamburguesa{
+    transform: translate(0, 0);
+}
   
  
 
