@@ -9,10 +9,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid-container{
+.grid-conts{
     height: 100vh;
     width: 100%;
     display: grid;
+}
+
+.grid-container{
     grid-template-columns: repeat(2, 75% 25%);
     grid-template-rows: repeat(3, 10% 10% 80%);
     grid-template-areas: 
@@ -20,6 +23,7 @@ body{
     "nav nav"
     "section section"
     ;
+    background: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR54oOSgd0HFzNkxfUuIq9p8v7BMqEx_oRYmtV_4Gl6z_BdXVKj");
 }
 
 .header{
@@ -29,6 +33,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 .nav{
@@ -36,11 +41,14 @@ body{
     background-color: #000;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 980;
 }
 
 .section{
     grid-area: section;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .aside{
@@ -50,7 +58,6 @@ body{
 
 .footer{
     grid-area: footer;
-    background-color: black;
 }
 
 .header > img{
@@ -191,7 +198,7 @@ body{
 .hamburguesa{
     position: fixed;
     top: 20%;
-    z-index: 900;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,20 +213,34 @@ body{
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
+    z-index: 997;
 }
 
 .hamburguesa-links > a{
     background-color: rgba(177, 244, 31, 0);
     color: #fff;
-    padding: 2rem 3rem;
+    padding: 1.7rem 2.7rem;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+}
+
+.hamburguesa-links > a:nth-child(1){
+    border-top: 3px solid #fff;
 }
 
 .hamburguesa-links > a:hover{
     background-color: rgb(254, 255, 253);
+    color: #000;
 }
   
 .hamburguesa-check:checked ~ .hamburguesa{
     transform: translate(0, 0);
+
+}
+
+.hamburguesa-check:checked ~ .hamburguesa-btn{
+    color: #ff0000;
 }
   
  
